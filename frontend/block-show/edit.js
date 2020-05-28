@@ -10,11 +10,7 @@ import ToolbarTheme from './toolbar-theme';
 import ToolbarWidgetType from './toolbar-widget-type';
 import {WIDGET_TYPES} from './toolbar-widget-type';
 
-const baseLink = 'https://datcoder.com/mixcloud-embed-advanced/';
-const anchorLinks = {
-  preview: baseLink + '#preview',
-  contact: baseLink + '#contact',
-};
+const pluginUrl = 'https://datcoder.com/mixcloud-embed-advanced/';
 
 /**
  * @class
@@ -124,7 +120,7 @@ export default class Edit extends Component {
 
     (async () => {
 
-      let response = await fetch('http://' + window.location.host + '/wp-json/mea/v1/preview/?show_url=' + this.state.url);
+      let response = await fetch(window.location.origin + '/wp-json/mea/v1/preview/?show_url=' + this.state.url);
 
       if (response.ok) {
         return await response.json();
@@ -191,7 +187,7 @@ export default class Edit extends Component {
     if (!fetching && (!preview || cannotEmbed || editingURL)) {
       return <>
         <Placeholder
-          previewInfoLink={anchorLinks.preview}
+          previewInfoLink={pluginUrl + '#preview'}
           cannotEmbed={cannotEmbed}
           url={url}
           loadPreview={loadPreview}
@@ -257,7 +253,7 @@ export default class Edit extends Component {
         <Notice status="error" onRemove={() => this.setState({previewLoadingError: false})}>
           {previewLoadingError} {__('You can')}
           &nbsp;<Button isPrimary isSmall onClick={this.requestPreview}>{__('Try again')}</Button> {__('or')}
-          &nbsp;<Button isSecondary isSmall href={anchorLinks.contact} target="_blank">{__('Send report')}</Button>
+          &nbsp;<Button isSecondary isSmall href={pluginUrl} target="_blank">{__('Send report')}</Button>
         </Notice>
       )}
 

@@ -2,6 +2,7 @@
 Contributors: Veliky
 Tags: mixcloud, embed, gutenberg
 Requires at least: 5.0
+Tested up: 5.4
 Requires PHP: 7.0
 Stable tag: 0.1
 License: GPLv2 or later
