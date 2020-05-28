@@ -10,7 +10,8 @@ namespace Veliky\MEA;
  * Author URI:        https://datcoder.com
  * Plugin URI:        https://datcoder.com/mixcloud-embed-advanced
  * Requires at least: 5.2
- * Requires PHP:      7.2
+ * Tested up:         5.4
+ * Requires PHP:      5.6
  * Text Domain:       ev_mea
  * Domain Path:       /languages
  * License:           GPL v2 or later

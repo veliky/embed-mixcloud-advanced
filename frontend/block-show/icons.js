@@ -93,7 +93,7 @@ export const downloadIcon = (rotate = false) => {
 };
 
 export const previewAlignLeft = (
-  <SVG viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <SVG width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
     <line strokeLinecap="null" strokeLinejoin="null" y2="2" x2="1" y1="2" x1="9" fillOpacity="null" strokeOpacity="null" strokeWidth="2" stroke="currentColor" fill="none"/>
     <Rect height="12" width="22" y="6" x="1" fillOpacity="0" strokeOpacity="null" strokeWidth="2" stroke="currentColor"/>
     <line strokeLinecap="null" strokeLinejoin="null" y2="7" x2="11" y1="18" x1="11" fillOpacity="null" strokeOpacity="null" strokeWidth="2" stroke="currentColor" fill="none"/>
@@ -102,7 +102,7 @@ export const previewAlignLeft = (
 );
 
 export const previewAlignCenter = (
-  <SVG viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <SVG width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
     <line strokeLinecap="null" strokeLinejoin="null" y2="2" x2="8" y1="2" x1="16" fillOpacity="null" strokeOpacity="null" strokeWidth="2" stroke="currentColor" fill="none"/>
     <Rect height="12" width="22" y="6" x="1" fillOpacity="0" strokeOpacity="null" strokeWidth="2" stroke="currentColor"/>
     <line strokeLinecap="null" strokeLinejoin="null" y2="7" x2="11" y1="18" x1="11" fillOpacity="null" strokeOpacity="null" strokeWidth="2" stroke="currentColor" fill="none"/>
@@ -111,11 +111,10 @@ export const previewAlignCenter = (
 );
 
 export const previewAlignRight = (
-  <SVG viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <SVG width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
     <line strokeLinecap="null" strokeLinejoin="null" y2="2" x2="15" y1="2" x1="23" fillOpacity="null" strokeOpacity="null" strokeWidth="2" stroke="currentColor" fill="none"/>
     <Rect height="12" width="22" y="6" x="1" fillOpacity="0" strokeOpacity="null" strokeWidth="2" stroke="currentColor"/>
     <line strokeLinecap="null" strokeLinejoin="null" y2="7" x2="11" y1="18" x1="11" fillOpacity="null" strokeOpacity="null" strokeWidth="2" stroke="currentColor" fill="none"/>
     <line strokeLinecap="null" strokeLinejoin="null" y2="12" x2="11" y1="12" x1="22" fillOpacity="null" strokeOpacity="null" strokeWidth="2" stroke="currentColor" fill="none"/>
   </SVG>
 );
-

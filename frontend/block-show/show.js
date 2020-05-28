@@ -130,8 +130,6 @@ export default class Show extends Component {
 
     };
 
-    console.log(window['Mixcloud']['PlayerWidget']);
-
     if (typeof window['Mixcloud']['PlayerWidget'] !== 'undefined') {
 
       if (!this.widget || this._iframe.current.getBoundingClientRect()['y'] !== this.iframeY) {
