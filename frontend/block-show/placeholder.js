@@ -18,7 +18,7 @@ export default (props) => {
   return (
     <Placeholder
       icon={<BlockIcon icon={previewIcon} showColors/>}
-      label={__('Mixcloud Embed Advanced')}
+      label={__('Mixcloud Advanced')}
       className="wp-block-embed"
       instructions={cannotEmbed ? __('This content could not be embedded!') : __('Paste a link to the content you want to display on your site.')}
     >

@@ -1,4 +1,4 @@
-=== Mixcloud Embed Advanced ===
+=== Embed Mixcloud Advanced ===
 Contributors: Veliky
 Tags: mixcloud, embed, gutenberg
 Requires at least: 5.2

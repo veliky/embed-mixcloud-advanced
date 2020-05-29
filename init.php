@@ -3,7 +3,7 @@
 namespace Veliky\MEA;
 
 /**
- * Plugin Name:       Mixcloud Embed Advanced
+ * Plugin Name:       Embed Mixcloud Advanced
  * Description:       Gutenberg block for a shows from mixcloud.com, allows you to customize it using 6 types of layout, two color schemes, and also provides the ability to play a short preview for each widget.
  * Version:           0.0.1
  * Author:            Evgeny Veliky
