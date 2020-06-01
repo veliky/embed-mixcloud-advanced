@@ -32,8 +32,7 @@ define( __NAMESPACE__ . '\REST_NAMESPACE', 'vema/v1' );
  *
  * @return string
  */
-function prefix( $string )
-{
+function prefix( $string ) {
   return PREFIX . '_' . $string;
 }
 
@@ -41,8 +40,7 @@ require_once namespace\PLUGIN_DIR . 'backend/Show.php';
 require_once namespace\PLUGIN_DIR . 'backend/RestPreviewProvider.php';
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\plugin_init' );
-function plugin_init()
-{
+function plugin_init() {
   new Show();
   new RestPreviewProvider( new \wp_http );
 }
