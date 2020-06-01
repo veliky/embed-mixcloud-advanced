@@ -1,6 +1,6 @@
 <?php
 
-namespace Veliky\MEA;
+namespace Veliky\EMA;
 
 /**
  * Plugin Name:       Embed Mixcloud Advanced
@@ -12,7 +12,7 @@ namespace Veliky\MEA;
  * Requires at least: 5.2
  * Tested up:         5.4
  * Requires PHP:      5.6
- * Text Domain:       ev_mea
+ * Text Domain:       ev_ema
  * Domain Path:       /languages
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -20,10 +20,10 @@ namespace Veliky\MEA;
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'PLUGIN_DIR', plugin_dir_path( __FILE__ ) . '/' );
-define( 'PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'PREFIX', 'mea' );
-define( 'REST_NAMESPACE', 'mea/v1' );
+define( __NAMESPACE__ . '\PLUGIN_DIR', plugin_dir_path( __FILE__ ) . '/' );
+define( __NAMESPACE__ . '\PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( __NAMESPACE__ . '\PREFIX', 'vema' );
+define( __NAMESPACE__ . '\REST_NAMESPACE', 'vema/v1' );
 
 /**
  * Adds plugin prefix to string
@@ -37,8 +37,8 @@ function prefix( $string )
   return PREFIX . '_' . $string;
 }
 
-require_once PLUGIN_DIR . 'backend/Show.php';
-require_once PLUGIN_DIR . 'backend/RestPreviewProvider.php';
+require_once namespace\PLUGIN_DIR . 'backend/Show.php';
+require_once namespace\PLUGIN_DIR . 'backend/RestPreviewProvider.php';
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\plugin_init' );
 function plugin_init()

@@ -1,10 +1,11 @@
 <?php
-namespace Veliky\MEA;
+
+namespace Veliky\EMA;
 
 /**
  * Class RestPreviewProvider
  *
- * @package Veliky\MEA
+ * @package Veliky\EMA
  */
 class RestPreviewProvider {
 
@@ -18,18 +19,18 @@ class RestPreviewProvider {
    *
    * @param \WP_Http $http
    */
-  public function __construct($http) {
+  public function __construct( $http ) {
 
     $this->http = $http;
 
-    add_action('rest_api_init', function() {
+    add_action( 'rest_api_init', function () {
 
-      register_rest_route(REST_NAMESPACE, '/preview/', [
-        'method' => 'GET',
-        'callback' => [$this, 'response']
-      ]);
+      register_rest_route( REST_NAMESPACE, '/preview/', [
+        'method'   => 'GET',
+        'callback' => [ $this, 'response' ]
+      ] );
 
-    });
+    } );
   }
 
   /**
@@ -39,18 +40,25 @@ class RestPreviewProvider {
 
     $response = [];
 
-    if (isset($_REQUEST['show_url']) and $_REQUEST['show_url']) {
+    if (
+      isset( $_REQUEST['show_url'] ) and
+      $show_url = esc_url_raw( $_REQUEST['show_url'] ) and
+      filter_var( $show_url, FILTER_VALIDATE_URL ) and
+      preg_match( '/^\s*(https?:\/\/(.+?\.)?mixcloud\.com\S+)\s*$/i', $show_url )
+    ) {
 
-      $response['show_url'] = $_REQUEST['show_url'];
-      $http_response = $this->http->get($_REQUEST['show_url']);
+      $http_response = $this->http->get( $show_url );
 
-      if (! $http_response instanceof \WP_Error) {
+      if ( ! $http_response instanceof \WP_Error ) {
 
         $matches = [];
-        preg_match('/(?:&quot;previewUrl&quot;:&quot;)(.*?)(?:&quot;)/', $http_response['body'], $matches);
+        preg_match( '/(?:&quot;previewUrl&quot;:&quot;)(.*?)(?:&quot;)/', $http_response['body'], $matches );
 
-        if (isset($matches[1]) and ! empty($matches[1])) {
-          $response['preview_url'] = $matches[1];
+        if ( isset( $matches[1] ) and ! empty( $matches[1] ) ) {
+          $response = [
+            'show_url'    => esc_url( $show_url ),
+            'preview_url' => esc_url( $matches[1] ),
+          ];
         }
 
       } else {
@@ -58,9 +66,9 @@ class RestPreviewProvider {
       }
 
     } else {
-      $response['error'] = __('Show url not specified!', 'ev_mea');
+      $response['error'] = __( 'Show url not specified!', 'ev_ema' );
     }
 
-    return new \WP_REST_Response($response, 200);
+    return new \WP_REST_Response( $response, 200 );
   }
 }
