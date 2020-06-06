@@ -1,0 +1,181 @@
+# Copyright (C) 2020 Evhen Veliky
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Embed Mixcloud Advanced 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/embed-mixcloud-advanced\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-06-06T08:15:55+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0-alpha-68fb0b6\n"
+"X-Domain: ev_ema\n"
+
+#. Plugin Name of the plugin
+msgid "Embed Mixcloud Advanced"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://datcoder.com/embed-mixcloud-advanced"
+msgstr ""
+
+#. Description of the plugin
+msgid "Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widgets, two color schemes, and the ability to play short audio previews for each widget."
+msgstr ""
+
+#. Author of the plugin
+msgid "Evhen Veliky"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://datcoder.com"
+msgstr ""
+
+#: backend/RestPreviewProvider.php:69
+msgid "Show url not specified!"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Server responded that something went wrong."
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Embedding…"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Autoplay"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Edit URL"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "You can"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Try again"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "or"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Send report"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Mixcloud Advanced"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "This show could not be embedded!"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Paste a link to the show you want to display on your site."
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Mixcloud URL"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Enter URL to embed here…"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Enable preview"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "This function can be disabled. To download preview data, a request will be made from the server to the show page."
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "See more"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Preview"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Left"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Center"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Right"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Preview button align"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "There is no preview data for this show. Download?"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Large Covered Widget"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Classic Widget"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Widget w/o Artwork"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Covered Widget"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Mini Widget"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Mini Widget w/o Artwork"
+msgstr ""
