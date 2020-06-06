@@ -10,12 +10,34 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widgets, two color schemes, and the ability to play short audio previews for each widget.
 
+== Description ==
+
+Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widgets, two color schemes, and the ability to play short audio previews for each widget.
+
+= Features =
+
+- Widget types
+  - Large Covered Widget
+  - Classic Widget
+  - Widget w\o Artwork
+  - Covered Widget
+  - Mini Widget
+  - Mini Widget w\o Artwork
+- Color schemes
+  - Light
+  - Dark
+- Autoplay
+- Audio Preview
+  - Audio Preview Button Alignment
+
 = Demo =
 
 [Top 7 Deep House Sets](https://datcoder.com/top-7-deep-house-sets/), [Top 7 Future House Sets](https://datcoder.com/top-7-future-house-sets/)
 
 == Screenshots ==
 
+1. Add block
+1. Set the show URL
 1. 6 Types Of Widget
 2. Dark / Light Scheme
 3. Mixcloud Preview
