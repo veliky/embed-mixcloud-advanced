@@ -15,7 +15,10 @@
     "format:js": "wp-scripts format-js",
     "lint:js": "wp-scripts lint-js",
     "start": "wp-scripts start --config webpack.config.js",
-    "build-css": "node-sass frontend/style.scss dist/style.min.css --output-style compressed"
+    "build-css": "node-sass frontend/style.scss dist/style.min.css --output-style compressed",
+    "i18n-make-pot": "wp i18n make-pot . languages/ev_ema.pot --domain=ev_ema && sed -i -E 's/(#: frontend+.*$)/#: dist\\/public-bundle.min.js\\r\\n#: dist\\/block-show-editor-bundle.min.js/' languages/ev_ema.pot",
+    "i18n-make-mo": "wp i18n make-mo languages",
+    "i18n-make-json": "wp i18n make-json languages"
   },
   "devDependencies": {
     "@wordpress/block-library": "^2.16.1",

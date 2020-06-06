@@ -1,6 +1,7 @@
 import {capitalize} from 'lodash';
 import {Toolbar} from '@wordpress/components';
 import {lightThemeIcon, darkThemeIcon} from './icons';
+import {__} from '@wordpress/i18n';
 
 /**
  * @param {{}} props
@@ -13,7 +14,7 @@ export default function ToolbarTheme (props) {
   function createThumbsControl (theme) {
     return {
       icon: theme === 'light' ? lightThemeIcon : darkThemeIcon,
-      title: capitalize(theme),
+      title: __(capitalize(theme), 'ev_ema'),
       isActive: value === theme,
       onClick: () => onClick(theme),
     };

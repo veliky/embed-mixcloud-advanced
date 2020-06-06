@@ -22,15 +22,15 @@ export default function ToolbarPreview (props) {
   const ALIGNMENT_OPTIONS = {
     'left': {
       icon: previewAlignLeft,
-      title: __('Left'),
+      title: __('Left', 'ev_ema'),
     },
     'center': {
       icon: previewAlignCenter,
-      title: __('Center'),
+      title: __('Center', 'ev_ema'),
     },
     'right': {
       icon: previewAlignRight,
-      title: __('Right'),
+      title: __('Right', 'ev_ema'),
     },
   };
 
@@ -49,7 +49,7 @@ export default function ToolbarPreview (props) {
         controls={[
           {
             icon: previewIcon,
-            title: __('Enable preview'),
+            title: __('Enable preview', 'ev_ema'),
             onClick: togglePreviewEnabled,
             isActive: previewEnabled,
           },
@@ -57,7 +57,7 @@ export default function ToolbarPreview (props) {
       />
       {previewEnabled && <Toolbar
         icon={ALIGNMENT_OPTIONS[previewAlign] ? ALIGNMENT_OPTIONS[previewAlign].icon : ALIGNMENT_OPTIONS[DEFAULT_PREVIEW_BTN_ALIGN].icon}
-        label={__('Preview button align')}
+        label={__('Preview button align', 'ev_ema')}
         isCollapsed={true}
         controls={alignControls}
       />}
@@ -69,7 +69,7 @@ export default function ToolbarPreview (props) {
     controls={[
       {
         icon: downloadIcon(previewLoading),
-        title: __('There is no preview data for this show. Download?'),
+        title: __('There is no preview data for this show. Download?', 'ev_ema'),
         isActive: false,
         onClick: emitLoadPreview
       }

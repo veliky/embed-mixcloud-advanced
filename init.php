@@ -4,11 +4,11 @@ namespace Veliky\EMA;
 
 /**
  * Plugin Name:       Embed Mixcloud Advanced
- * Description:       Gutenberg block for a shows from mixcloud.com, allows you to customize it using 6 types of layout, two color schemes, and also provides the ability to play a short preview for each widget.
- * Version:           0.0.1
+ * Description:       Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widgets, two color schemes, and the ability to play short audio previews for each widget.
+ * Version:           0.1.0
  * Author:            Evgeny Veliky
  * Author URI:        https://datcoder.com
- * Plugin URI:        https://datcoder.com/mixcloud-embed-advanced
+ * Plugin URI:        https://datcoder.com/embed-mixcloud-advanced
  * Requires at least: 5.2
  * Tested up:         5.4
  * Requires PHP:      5.6
@@ -33,7 +33,7 @@ define( __NAMESPACE__ . '\REST_NAMESPACE', 'vema/v1' );
  * @return string
  */
 function prefix( $string ) {
-  return PREFIX . '_' . $string;
+	return PREFIX . '_' . $string;
 }
 
 require_once namespace\PLUGIN_DIR . 'backend/Show.php';
@@ -41,6 +41,6 @@ require_once namespace\PLUGIN_DIR . 'backend/RestPreviewProvider.php';
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\plugin_init' );
 function plugin_init() {
-  new Show();
-  new RestPreviewProvider( new \wp_http );
+	new Show();
+	new RestPreviewProvider( new \wp_http );
 }

@@ -10,7 +10,7 @@ import ToolbarTheme from './toolbar-theme';
 import ToolbarWidgetType from './toolbar-widget-type';
 import {WIDGET_TYPES} from './toolbar-widget-type';
 
-const pluginUrl = 'https://datcoder.com/mixcloud-embed-advanced/';
+const pluginUrl = 'https://datcoder.com/embed-mixcloud-advanced/';
 
 /**
  * @class
@@ -137,7 +137,7 @@ export default class Edit extends Component {
         if (typeof response['error'] !== 'undefined') {
           this.setState({previewLoadingError: response['error']});
         } else {
-          this.setState({previewLoadingError: __('Server responded that something went wrong.')});
+          this.setState({previewLoadingError: __('Server responded that something went wrong.', 'ev_ema')});
         }
       }
 
@@ -179,7 +179,7 @@ export default class Edit extends Component {
       return <>
         <div className="wp-block-embed is-loading">
           <Spinner/>
-          <p>{__('Embedding…')}</p>
+          <p>{__('Embedding…', 'ev_ema')}</p>
         </div>
       </>;
     }
@@ -217,7 +217,7 @@ export default class Edit extends Component {
         <Toolbar controls={[
           {
             icon: 'controls-play',
-            title: __('Autoplay'),
+            title: __('Autoplay', 'ev_ema'),
             isActive: autoplay,
             onClick: value => this.updateAttribute({autoplay: !autoplay}),
           },
@@ -243,7 +243,7 @@ export default class Edit extends Component {
         <Toolbar controls={[{
           icon: 'edit',
           class: 'mea_preview_control',
-          title: __('Edit URL'),
+          title: __('Edit URL', 'ev_ema'),
           onClick: this.emitChangeUrl,
         }]}/>
 
@@ -251,9 +251,9 @@ export default class Edit extends Component {
 
       {previewLoadingError && (
         <Notice status="error" onRemove={() => this.setState({previewLoadingError: false})}>
-          {previewLoadingError} {__('You can')}
-          &nbsp;<Button isPrimary isSmall onClick={this.requestPreview}>{__('Try again')}</Button> {__('or')}
-          &nbsp;<Button isSecondary isSmall href={pluginUrl} target="_blank">{__('Send report')}</Button>
+          {previewLoadingError} {__('You can', 'ev_ema')}
+          &nbsp;<Button isPrimary isSmall onClick={this.requestPreview}>{__('Try again', 'ev_ema')}</Button> {__('or', 'ev_ema')}
+          &nbsp;<Button isSecondary isSmall href={pluginUrl} target="_blank">{__('Send report', 'ev_ema')}</Button>
         </Notice>
       )}
 

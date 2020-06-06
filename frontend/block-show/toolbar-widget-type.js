@@ -11,40 +11,40 @@ import {
 
 export const WIDGET_TYPES = {
   picture: {
-    title: __('Picture Widget'),
+    title: __('Large Covered Widget', 'ev_ema'),
     icon: pictureWidgetIcon,
     height: 180,
     hideCover: false,
   },
   classic: {
-    title: __('Classic Widget'),
+    title: __('Classic Widget', 'ev_ema'),
     icon: classicWidgetIcon,
     height: 120,
     hideCover: true,
   },
   noArtwork: {
-    title: __('Widget w/o Artwork'),
+    title: __('Widget w/o Artwork', 'ev_ema'),
     icon: classicWidgetHideArtworkIcon,
     height: 120,
     hideArtwork: true,
     hideCover: true,
   },
   covered: {
-    title: __('Covered Widget'),
+    title: __('Covered Widget', 'ev_ema'),
     icon: classicWidgetCoveredIcon,
     height: 120,
     hideArtwork: true,
     hideCover: false,
   },
   mini: {
-    title: __('Mini Widget'),
+    title: __('Mini Widget', 'ev_ema'),
     icon: miniWidgetIcon,
     height: 60,
     hideCover: true,
     mini: true,
   },
   minNoArtwork: {
-    title: __('Mini Widget w/o Artwork'),
+    title: __('Mini Widget w/o Artwork', 'ev_ema'),
     icon: miniWidgetHideArtworkIcon,
     height: 60,
     hideArtwork: true,
