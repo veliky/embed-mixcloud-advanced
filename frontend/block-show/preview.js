@@ -170,6 +170,7 @@ export default class Preview {
 
         if (resetCurrentTime) {
           this.audio.currentTime = 0;
+          this.updateSpinnerProgress(0);
         } else {
           this.container.className += ' mea-show__wrapper_pause';
           this.updateSpinnerProgress(this.audio.currentTime);
