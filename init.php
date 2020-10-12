@@ -5,14 +5,13 @@ namespace Veliky\EMA;
 /**
  * Plugin Name:       Embed Mixcloud Advanced
  * Description:       Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widgets, two color schemes, and the ability to play short audio previews for each widget.
- * Version:           0.1.0
+ * Version:           0.1.4
  * Author:            Evhen Veliky
  * Author URI:        https://datcoder.com
  * Plugin URI:        https://datcoder.com/embed-mixcloud-advanced
  * Requires at least: 5.2
- * Tested up:         5.4
+ * Tested up:         5.5
  * Requires PHP:      5.6
- * Text Domain:       ev_ema
  * Domain Path:       /languages
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -41,6 +40,9 @@ require_once namespace\PLUGIN_DIR . 'backend/RestPreviewProvider.php';
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\plugin_init' );
 function plugin_init() {
+
+	load_plugin_textdomain('embed-mixcloud-advanced', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+
 	new Show();
 	new RestPreviewProvider( new \wp_http );
 }

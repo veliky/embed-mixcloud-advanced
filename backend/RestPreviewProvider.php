@@ -26,8 +26,9 @@ class RestPreviewProvider {
 		add_action( 'rest_api_init', function () {
 
 			register_rest_route( REST_NAMESPACE, '/preview/', [
-				'method'   => 'GET',
-				'callback' => [ $this, 'response' ]
+				'method'              => 'GET',
+				'callback'            => [ $this, 'response' ],
+				'permission_callback' => '__return_true'
 			] );
 
 		} );
@@ -66,7 +67,7 @@ class RestPreviewProvider {
 			}
 
 		} else {
-			$response['error'] = __( 'Show url not specified!', 'ev_ema' );
+			$response['error'] = __( 'Show url not specified!', 'embed-mixcloud-advanced' );
 		}
 
 		return new \WP_REST_Response( $response, 200 );

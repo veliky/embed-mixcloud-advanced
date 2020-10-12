@@ -20,7 +20,7 @@ export const matchMixcloudUrl = url => /^\s*(https?:\/\/(.+?\.)?mixcloud\.com\S+
  */
 registerBlockType('veliky/mixcloud-show', {
 
-  title: __('Mixcloud Advanced', 'ev_mea'),
+  title: __('Mixcloud Advanced', 'embed-mixcloud-advanced'),
   icon: previewIcon,
   category: 'embed',
   supports: {

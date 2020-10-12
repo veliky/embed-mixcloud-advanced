@@ -247,7 +247,7 @@ export default class Show extends Component {
             <div
               className={'mea-show__preview-btn ' + (light ? 'mea-show__preview-btn_light' : '') + btnAlignClass}>
               {previewIcon}
-              <span>{__('Preview', 'ev_ema')}</span>
+              <span>{__('Preview', 'embed-mixcloud-advanced')}</span>
             </div>
           )}
           <div

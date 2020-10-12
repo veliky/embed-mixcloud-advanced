@@ -76,7 +76,7 @@ class Show {
 			'script'        => prefix( 'public_script' ),
 		] );
 
-		wp_set_script_translations( prefix( 'block_show_editor_script' ), 'ev_ema', PLUGIN_DIR . 'languages' );
-		wp_set_script_translations( prefix( 'public_script' ), 'ev_ema', PLUGIN_DIR . 'languages' );
+		wp_set_script_translations( prefix( 'block_show_editor_script' ), 'embed-mixcloud-advanced', PLUGIN_DIR . 'languages' );
+		wp_set_script_translations( prefix( 'public_script' ), 'embed-mixcloud-advanced', PLUGIN_DIR . 'languages' );
 	}
 }

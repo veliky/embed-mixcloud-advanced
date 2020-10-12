@@ -18,9 +18,9 @@ export default (props) => {
   return (
     <Placeholder
       icon={<BlockIcon icon={previewIcon} showColors/>}
-      label={__('Mixcloud Advanced', 'ev_ema')}
+      label={__('Mixcloud Advanced', 'embed-mixcloud-advanced')}
       className="wp-block-embed"
-      instructions={cannotEmbed ? __('This show could not be embedded!', 'ev_ema') : __('Paste a link to the show you want to display on your site.', 'ev_ema')}
+      instructions={cannotEmbed ? __('This show could not be embedded!', 'embed-mixcloud-advanced') : __('Paste a link to the show you want to display on your site.', 'embed-mixcloud-advanced')}
     >
 
       <form onSubmit={onSubmit}>
@@ -28,8 +28,8 @@ export default (props) => {
           type="url"
           value={url || ''}
           className={'components-placeholder__input' + (cannotEmbed ? ' components-placeholder__input-error' : '')}
-          aria-label={__('Mixcloud URL', 'ev_ema')}
-          placeholder={__('Enter URL to embed here…', 'ev_ema')}
+          aria-label={__('Mixcloud URL', 'embed-mixcloud-advanced')}
+          placeholder={__('Enter URL to embed here…', 'embed-mixcloud-advanced')}
           onChange={onChangeUrl}
         />
         <Button isSecondary type="submit">
@@ -39,14 +39,14 @@ export default (props) => {
 
       <form>
         <CheckboxControl className='components-placeholder__learn-more'
-                         label={__('Enable preview', 'ev_ema')}
+                         label={__('Enable preview', 'embed-mixcloud-advanced')}
                          checked={loadPreview}
                          onChange={onChangeLoadPreview}/>
       </form>
       <div>
         <div>
-          {__('This function can be disabled. To download preview data, a request will be made from the server to the show page.', 'ev_ema')}
-          &nbsp;<ExternalLink href={previewInfoLink} target='_blank'>{__('See more', 'ev_ema')}</ExternalLink>
+          {__('This function can be disabled. To download preview data, a request will be made from the server to the show page.', 'embed-mixcloud-advanced')}
+          &nbsp;<ExternalLink href={previewInfoLink} target='_blank'>{__('See more', 'embed-mixcloud-advanced')}</ExternalLink>
         </div>
       </div>
 

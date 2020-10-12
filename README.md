@@ -24,7 +24,7 @@ Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widg
 
 ### Details
 
- * Version:           0.1.0
+ * Version:           0.1.1
  * Requires PHP:      5.6
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html

@@ -137,7 +137,7 @@ export default class Edit extends Component {
         if (typeof response['error'] !== 'undefined') {
           this.setState({previewLoadingError: response['error']});
         } else {
-          this.setState({previewLoadingError: __('Server responded that something went wrong.', 'ev_ema')});
+          this.setState({previewLoadingError: __('Server responded that something went wrong.', 'embed-mixcloud-advanced')});
         }
       }
 
@@ -179,7 +179,7 @@ export default class Edit extends Component {
       return <>
         <div className="wp-block-embed is-loading">
           <Spinner/>
-          <p>{__('Embedding…', 'ev_ema')}</p>
+          <p>{__('Embedding…', 'embed-mixcloud-advanced')}</p>
         </div>
       </>;
     }
@@ -217,7 +217,7 @@ export default class Edit extends Component {
         <Toolbar controls={[
           {
             icon: 'controls-play',
-            title: __('Autoplay', 'ev_ema'),
+            title: __('Autoplay', 'embed-mixcloud-advanced'),
             isActive: autoplay,
             onClick: value => this.updateAttribute({autoplay: !autoplay}),
           },
@@ -242,8 +242,8 @@ export default class Edit extends Component {
 
         <Toolbar controls={[{
           icon: 'edit',
-          class: 'mea_preview_control',
-          title: __('Edit URL', 'ev_ema'),
+          className: 'mea_preview_control',
+          title: __('Edit URL', 'embed-mixcloud-advanced'),
           onClick: this.emitChangeUrl,
         }]}/>
 
@@ -251,9 +251,9 @@ export default class Edit extends Component {
 
       {previewLoadingError && (
         <Notice status="error" onRemove={() => this.setState({previewLoadingError: false})}>
-          {previewLoadingError} {__('You can', 'ev_ema')}
-          &nbsp;<Button isPrimary isSmall onClick={this.requestPreview}>{__('Try again', 'ev_ema')}</Button> {__('or', 'ev_ema')}
-          &nbsp;<Button isSecondary isSmall href={pluginUrl} target="_blank">{__('Send report', 'ev_ema')}</Button>
+          {previewLoadingError} {__('You can', 'embed-mixcloud-advanced')}
+          &nbsp;<Button isPrimary isSmall onClick={this.requestPreview}>{__('Try again', 'embed-mixcloud-advanced')}</Button> {__('or', 'embed-mixcloud-advanced')}
+          &nbsp;<Button isSecondary isSmall href={pluginUrl} target="_blank">{__('Send report', 'embed-mixcloud-advanced')}</Button>
         </Notice>
       )}
 

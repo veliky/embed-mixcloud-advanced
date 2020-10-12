@@ -22,15 +22,15 @@ export default function ToolbarPreview (props) {
   const ALIGNMENT_OPTIONS = {
     'left': {
       icon: previewAlignLeft,
-      title: __('Left', 'ev_ema'),
+      title: __('Left', 'embed-mixcloud-advanced'),
     },
     'center': {
       icon: previewAlignCenter,
-      title: __('Center', 'ev_ema'),
+      title: __('Center', 'embed-mixcloud-advanced'),
     },
     'right': {
       icon: previewAlignRight,
-      title: __('Right', 'ev_ema'),
+      title: __('Right', 'embed-mixcloud-advanced'),
     },
   };
 
@@ -49,7 +49,7 @@ export default function ToolbarPreview (props) {
         controls={[
           {
             icon: previewIcon,
-            title: __('Enable preview', 'ev_ema'),
+            title: __('Enable preview', 'embed-mixcloud-advanced'),
             onClick: togglePreviewEnabled,
             isActive: previewEnabled,
           },
@@ -57,7 +57,7 @@ export default function ToolbarPreview (props) {
       />
       {previewEnabled && <Toolbar
         icon={ALIGNMENT_OPTIONS[previewAlign] ? ALIGNMENT_OPTIONS[previewAlign].icon : ALIGNMENT_OPTIONS[DEFAULT_PREVIEW_BTN_ALIGN].icon}
-        label={__('Preview button align', 'ev_ema')}
+        label={__('Preview button align', 'embed-mixcloud-advanced')}
         isCollapsed={true}
         controls={alignControls}
       />}
@@ -69,7 +69,7 @@ export default function ToolbarPreview (props) {
     controls={[
       {
         icon: downloadIcon(previewLoading),
-        title: __('There is no preview data for this show. Download?', 'ev_ema'),
+        title: __('There is no preview data for this show. Download?', 'embed-mixcloud-advanced'),
         isActive: false,
         onClick: emitLoadPreview
       }
