@@ -60,7 +60,8 @@ class Show {
 			prefix( 'public_script' ),
 			PLUGIN_URL . 'dist/public-bundle.min.js',
 			[ prefix( 'mixcloud_api' ) ],
-			$script_data['version']
+			$script_data['version'],
+			true
 		);
 
 		wp_register_style(

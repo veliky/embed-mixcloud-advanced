@@ -4,7 +4,7 @@ Tags: mixcloud, embed, gutenberg
 Requires at least: 5.2
 Tested up to: 5.5
 Requires PHP: 5.6
-Stable tag: 0.1.4
+Stable tag: 0.1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widg
 3. Mixcloud Preview
 
 == Changelog ==
+
+= 0.1.5 =
+* SPA compatibility
 
 = 0.1.4 =
 * Fix warnings, tested up to 5.5

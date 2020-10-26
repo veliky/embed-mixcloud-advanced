@@ -1,10 +1,27 @@
 import Preview from './block-show/preview';
 
 /**
+ * Startup events
+ */
+
+document.addEventListener('DOMContentLoaded', init);
+
+if (document.readyState === 'loading') {
+
+  // Init by original event if script loads with page
+  window.addEventListener('load', init);
+
+} else {
+
+  // Init if script was loaded dynamically when page loading is done
+  init();
+}
+
+
+/**
  * Entry point of blocks on front end
  */
-document.addEventListener('DOMContentLoaded', () => {
-
+function init () {
 
   for (let container of document.getElementsByClassName('mea-show__container')) {
 
@@ -36,5 +53,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-
-});
+}

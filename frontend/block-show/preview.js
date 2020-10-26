@@ -58,6 +58,7 @@ export default class Preview {
     this.on = this.on.bind(this);
     this.off = this.off.bind(this);
     this.onClick = this.onClick.bind(this);
+    this.observeDeletion = this.observeDeletion.bind(this);
 
     if (previewUrl && !this.audio) {
 
@@ -73,9 +74,33 @@ export default class Preview {
       this.audio.addEventListener('pause', this.stop);
     }
 
-
     this.playing = false;
     this.available = true;
+
+    this.observeDeletion();
+  }
+
+  /**
+   * @this Preview
+   */
+  observeDeletion() {
+
+    const observer = new MutationObserver((mutations) => {
+
+      mutations.forEach((mutation) => {
+
+        const nodes = Array.from(mutation.removedNodes);
+
+        if (nodes.indexOf(this.container)) {
+          this.stop();
+        }
+
+      });
+    });
+
+    observer.observe(document.body, {
+      childList: true
+    });
   }
 
   /**
