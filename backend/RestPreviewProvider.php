@@ -55,6 +55,8 @@ class RestPreviewProvider {
 				$matches = [];
 				preg_match( '/(?:&quot;previewUrl&quot;:&quot;)(.*?)(?:&quot;)/', $http_response['body'], $matches );
 
+				$response = $matches;
+
 				if ( isset( $matches[1] ) and ! empty( $matches[1] ) ) {
 					$response = [
 						'show_url'    => esc_url( $show_url ),

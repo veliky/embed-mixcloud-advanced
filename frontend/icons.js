@@ -82,6 +82,13 @@ export const previewIcon = (
   </SVG>
 );
 
+export const mixcloudIcon = (
+  <SVG className='mea-show__spinner' width="20" height='20' viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <Circle cx="10" cy="10" r="9"/>
+    <text fill="currentColor" strokeWidth="0" x="5.5" y="14" fontSize="11" fontFamily="sans-serif">M</text>
+  </SVG>
+);
+
 export const downloadIcon = (rotate = false) => {
 
   const classes = 'mea-show__spinner' + (rotate ? ' mea-show__spinner_download' : '');

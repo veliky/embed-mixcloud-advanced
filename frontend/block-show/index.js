@@ -5,15 +5,9 @@ import {withSelect, withDispatch} from '@wordpress/data';
 
 import Edit from './edit';
 import Show from './show';
-import {previewIcon} from './icons';
+import {previewIcon} from '../icons';
 import {WIDGET_TYPES} from './toolbar-widget-type';
-
-/**
- * @param {String} url
- *
- * @return {Boolean}
- */
-export const matchMixcloudUrl = url => /^\s*(https?:\/\/(.+?\.)?mixcloud\.com\S+)\s*$/i.test(url);
+import {matchMixcloudUrl} from "../utils";
 
 /**
  * Back end Gutenberg entry point
@@ -29,6 +23,10 @@ registerBlockType('veliky/mixcloud-show', {
   attributes: {
     url: {
       type: 'string',
+    },
+    editingURL: {
+      type: 'boolean',
+      default: true,
     },
     widgetType: {
       type: 'string',
@@ -46,6 +44,10 @@ registerBlockType('veliky/mixcloud-show', {
       type: 'boolean',
       default: true,
     },
+    loadPreview: {
+      type: 'boolean',
+      default: true,
+    },
     previewAlign: {
       type: 'string',
       default: 'right',
@@ -60,7 +62,7 @@ registerBlockType('veliky/mixcloud-show', {
   edit: compose(
     withSelect((select, ownProps) => {
 
-      const { url } = ownProps.attributes;
+      const { url, editingURL } = ownProps.attributes;
       const core = select('core');
       const {
         getEmbedPreview,
@@ -68,7 +70,11 @@ registerBlockType('veliky/mixcloud-show', {
         isRequestingEmbedPreview,
       } = core;
 
-      const definedUrl = undefined !== url;
+      if (editingURL) {
+        return;
+      }
+
+      const definedUrl = undefined !== url && url !== '';
       const preview = definedUrl && getEmbedPreview(url);
 
       const previewIsFallback = definedUrl && isPreviewEmbedFallback(url);
@@ -95,7 +101,7 @@ registerBlockType('veliky/mixcloud-show', {
 
     withDispatch((dispatch, ownProps) => {
 
-      const { url, widgetType, theme, autoplay } = ownProps.attributes;
+      const url = ownProps.attributes.url;
       const coreData = dispatch('core/data');
 
       const tryAgain = () => {
@@ -103,6 +109,7 @@ registerBlockType('veliky/mixcloud-show', {
           url
         ]);
       };
+
       return { tryAgain };
 
     })

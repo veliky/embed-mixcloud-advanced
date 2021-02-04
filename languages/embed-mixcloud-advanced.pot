@@ -1,14 +1,15 @@
-# Copyright (C) 2020 Evhen Veliky
+# Copyright (C) 2021 Evhen Veliky
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Embed Mixcloud Advanced 0.1.1\n"
+"Project-Id-Version: Embed Mixcloud Advanced 0.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/embed-mixcloud-advanced\n"
-"Last-Translator: Evhen Veliky <admin@datcoder.com>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-07-13T17:30:57+00:00\n"
+"POT-Creation-Date: 2021-01-22T12:37:00+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0-alpha-75cb7e3\n"
 "X-Domain: embed-mixcloud-advanced\n"
@@ -33,8 +34,83 @@ msgstr ""
 msgid "https://datcoder.com"
 msgstr ""
 
-#: backend/RestPreviewProvider.php:69
+#: backend/RestPreviewProvider.php:70
 msgid "Show url not specified!"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Loading…"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Mixcloud Advanced - List"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Something went wrong!"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "To import shows from a Mixcloud channel please select the parameters and press button."
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Mixcloud Channel URL"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Enter channel URL here…"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Offset"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Limit"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Since"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Until"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Enable preview on each show"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Placeholder instead widget (editing parameters mode)"
+msgstr ""
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "To download the preview data, a request will be made from the server to the show page."
 msgstr ""
 
 #: dist/public-bundle.min.js

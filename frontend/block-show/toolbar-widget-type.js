@@ -7,7 +7,7 @@ import {
   classicWidgetCoveredIcon,
   miniWidgetIcon,
   pictureWidgetIcon
-} from './icons';
+} from '../icons';
 
 export const WIDGET_TYPES = {
   picture: {
@@ -72,6 +72,6 @@ export default function ToolbarWidgetType (props) {
   });
 
   return (
-    <Toolbar controls={widgetTypesControls}/>
+    <Toolbar className={'mea-toolbar'} controls={widgetTypesControls}/>
   );
 }

@@ -1,6 +1,6 @@
 import {capitalize} from 'lodash';
 import {Toolbar} from '@wordpress/components';
-import {lightThemeIcon, darkThemeIcon} from './icons';
+import {lightThemeIcon, darkThemeIcon} from '../icons';
 import {__} from '@wordpress/i18n';
 
 /**
@@ -20,5 +20,5 @@ export default function ToolbarTheme (props) {
     };
   }
 
-  return <Toolbar controls={['light', 'dark'].map(createThumbsControl)}/>;
+  return <Toolbar className={'mea-toolbar'} controls={['light', 'dark'].map(createThumbsControl)}/>;
 }

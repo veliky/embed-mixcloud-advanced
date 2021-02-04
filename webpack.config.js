@@ -6,6 +6,7 @@ module.exports = {
   ...defaultConfig,
   entry: {
     'block-show-editor': ['./frontend/block-show'],
+    'block-list-editor': ['./frontend/block-list'],
     public: ['./frontend/public.js'],
   },
   output: {

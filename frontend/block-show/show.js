@@ -1,7 +1,7 @@
 import {Component, createRef} from '@wordpress/element';
 import {__} from '@wordpress/i18n';
 import Preview from './preview';
-import {previewIcon} from "./icons";
+import {previewIcon} from "../icons";
 
 /**
  * @class
@@ -202,16 +202,17 @@ export default class Show extends Component {
 
     if (url) {
 
+      url += url[url.length - 1] !== '/' ? '/' : '';
+
       let [base, showPath] = url.split('.com');
-      url = 'https://www.mixcloud.com/widget/iframe/?feed=' + showPath + (
+
+      return 'https://www.mixcloud.com/widget/iframe/?feed=' + showPath + (
         updateUrl ? (
           '&mini=' + (mini | 0) +
           '&hide_cover=' + (hideCover | 0) +
           '&hide_artwork=' + (hideArtwork | 0) +
           '&light=' + (light | 0)
         ) : '');
-
-      return url;
     }
 
     return false;

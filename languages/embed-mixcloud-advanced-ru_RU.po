@@ -37,6 +37,74 @@ msgstr ""
 msgid "Show url not specified!"
 msgstr "Не указан URL для шоу!"
 
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Loading…"
+msgstr "Загрузка…"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Mixcloud Advanced - List"
+msgstr "Mixcloud Advanced - Список"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Something went wrong!"
+msgstr "Что-то пошло не так!"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "To import shows from a Mixcloud channel please select the parameters and press button."
+msgstr "Для импорта шоу с Mixcloud канала пожалуйста выберите параметры и нажмите кнопку."
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Mixcloud Channel URL"
+msgstr "URL Mixcloud Канала"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Enter channel URL here…"
+msgstr "Введите URL канала"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Offset"
+msgstr "Сдвиг"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Limit"
+msgstr "Лимит"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Since"
+msgstr "Начало периода"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Until"
+msgstr "Конец периода"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Enable preview on each show"
+msgstr "Превью на каждом виджете"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Placeholder instead widget (editing parameters mode)"
+msgstr "Плейсхолдер вместо виджета (режим редактирования)"
+
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "To download the preview data, a request will be made from the server to the show page."
+msgstr "Для загрузки данных превью будет совершён запрос с сервера на страницу шоу."
+
 #: dist/public-bundle.min.js
 #: dist/block-show-editor-bundle.min.js
 msgid "Server responded that something went wrong."

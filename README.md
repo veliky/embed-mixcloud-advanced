@@ -1,8 +1,8 @@
 # Embed Mixcloud Advanced
 
-Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widgets, two color schemes, and the ability to play short audio previews for each widget.
+This plugin adds two Gutenberg blocks for embedding shows from mixcloud.com:
 
-## Functions
+## Mixcloud Advanced
 
 - Widget types
   - Large Covered Widget
@@ -16,7 +16,19 @@ Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widg
   - Dark
 - Autoplay
 - Audio Preview
-  - Audio Preview Button Alignment 
+  - Audio Preview Button Alignment
+
+## Mixcloud Advanced - List
+
+Allows to import multiple shows from a channel with these parameters:
+
+- Offset
+- Limit
+- Since
+- Until
+
+[x] Enable preview on each show  
+[ ] Placeholder instead widget (editing parameters mode)
 
 ### Demo
  
@@ -24,7 +36,7 @@ Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widg
 
 ### Details
 
- * Version:           0.1.1
+ * Version:           0.2.0
  * Requires PHP:      5.6
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html

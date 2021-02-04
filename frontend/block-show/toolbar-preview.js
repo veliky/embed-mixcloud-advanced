@@ -1,6 +1,6 @@
-import {Toolbar} from '@wordpress/components';
+import {Toolbar, ToolbarGroup} from '@wordpress/components';
 import {__} from '@wordpress/i18n';
-import {previewIcon, downloadIcon, previewAlignLeft, previewAlignCenter, previewAlignRight} from './icons';
+import {previewIcon, downloadIcon, previewAlignLeft, previewAlignCenter, previewAlignRight} from '../icons';
 
 /**
  * @param {{}} props
@@ -38,6 +38,7 @@ export default function ToolbarPreview (props) {
     return {
       ...ALIGNMENT_OPTIONS[key],
       isActive: previewAlign === key,
+      className: 'aaa',
       onClick: () => emitChangePreviewAlign(key),
     };
   });
@@ -46,6 +47,7 @@ export default function ToolbarPreview (props) {
 
     return <>
       <Toolbar
+        className={'mea-toolbar'}
         controls={[
           {
             icon: previewIcon,
@@ -55,7 +57,7 @@ export default function ToolbarPreview (props) {
           },
         ]}
       />
-      {previewEnabled && <Toolbar
+      {previewEnabled && <ToolbarGroup className={'mea-toolbar'}
         icon={ALIGNMENT_OPTIONS[previewAlign] ? ALIGNMENT_OPTIONS[previewAlign].icon : ALIGNMENT_OPTIONS[DEFAULT_PREVIEW_BTN_ALIGN].icon}
         label={__('Preview button align', 'embed-mixcloud-advanced')}
         isCollapsed={true}

@@ -1,7 +1,7 @@
 import {BlockIcon} from '@wordpress/block-editor';
 import {Button, Placeholder, CheckboxControl, ExternalLink, Dashicon} from '@wordpress/components';
 import {__, _x} from '@wordpress/i18n';
-import {previewIcon} from './icons';
+import {previewIcon} from '../icons';
 
 export default (props) => {
 
@@ -32,7 +32,7 @@ export default (props) => {
           placeholder={__('Enter URL to embed here…', 'embed-mixcloud-advanced')}
           onChange={onChangeUrl}
         />
-        <Button isSecondary type="submit">
+        <Button isPrimary type="submit">
           {_x('Embed', 'button label')}
         </Button>
       </form>

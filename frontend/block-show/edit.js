@@ -7,10 +7,8 @@ import Placeholder from './placeholder';
 import Show from './show';
 import ToolbarPreview from './toolbar-preview';
 import ToolbarTheme from './toolbar-theme';
-import ToolbarWidgetType from './toolbar-widget-type';
-import {WIDGET_TYPES} from './toolbar-widget-type';
-
-const pluginUrl = 'https://datcoder.com/embed-mixcloud-advanced/';
+import ToolbarWidgetType, {WIDGET_TYPES} from './toolbar-widget-type';
+import {pluginUrl} from "../utils";
 
 /**
  * @class
@@ -26,13 +24,13 @@ export default class Edit extends Component {
     super(props);
 
     this.setUrl = this.setUrl.bind(this);
-    this.emitChangeUrl = this.emitChangeUrl.bind(this);
+    this.submit = this.submit.bind(this);
     this.requestPreview = this.requestPreview.bind(this);
     this.getWidgetProp = this.getWidgetProp.bind(this);
-    this.updateAttribute = this.updateAttribute.bind(this);
+    this.__set = this.__set.bind(this);
 
     this.state = {
-      editingURL: false,
+      editingURL: props.attributes.editingURL || true,
       url: props.attributes.url,
       widgetType: props.attributes.widgetType || 'classic',
       theme: props.attributes.theme || 'dark',
@@ -43,33 +41,44 @@ export default class Edit extends Component {
       previewLoading: false,
       previewLoadingError: false,
       widget: undefined,
-      loadPreview: true,
+      loadPreview: props.attributes.loadPreview,
     };
 
+    if (!props.attributes.editingURL) {
+      setTimeout(this.submit, 100);
+    }
+
     this._show = createRef();
+  }
+
+  /**
+   * @param {string} url
+   * @this Edit
+   */
+  setUrl(url) {
+
+    this.__set({url});
+
+    if (this.props.cannotEmbed && !this.state.editingURL) {
+      this.__set({editingURL: true});
+    }
   }
 
   /**
    * @param {{}|undefined=} event
    * @this Edit
    */
-  setUrl(event = undefined) {
+  submit(event = undefined) {
 
     if (event) {
       event.preventDefault();
     }
 
-    const {
-      url,
-      previewUrl,
-      loadPreview
-    } = this.state;
-    const {setAttributes} = this.props;
+    this.__set({editingURL: false});
 
-    setAttributes({url});
-    this.setState({editingURL: false});
+    const {url, previewUrl, loadPreview} = this.state;
 
-    if (!previewUrl && loadPreview) {
+    if (url && !previewUrl && loadPreview) {
       this.requestPreview();
     }
   }
@@ -78,24 +87,10 @@ export default class Edit extends Component {
    * @param {{}} payload
    * @this Edit
    */
-  updateAttribute(payload) {
+  __set(payload) {
 
     this.setState(payload);
-
-    const {setAttributes} = this.props;
-    setAttributes(payload);
-  }
-
-  /**
-   * @this Edit
-   */
-  emitChangeUrl() {
-
-    this.setState({
-      url: undefined,
-      editingURL: true,
-      previewUrl: undefined
-    }, this.setUrl);
+    this.props.setAttributes(payload);
   }
 
   /**
@@ -131,7 +126,7 @@ export default class Edit extends Component {
     })().then((response) => {
 
       if (response && typeof response['preview_url'] !== 'undefined') {
-        this.updateAttribute({previewUrl: response['preview_url']});
+        this.__set({previewUrl: response['preview_url']});
       } else {
 
         if (typeof response['error'] !== 'undefined') {
@@ -192,8 +187,8 @@ export default class Edit extends Component {
           url={url}
           loadPreview={loadPreview}
           tryAgain={tryAgain}
-          onSubmit={this.setUrl}
-          onChangeUrl={(event) => this.setState({url: event.target.value})}
+          onSubmit={this.submit}
+          onChangeUrl={(event) => this.setUrl(event.target.value)}
           onChangeLoadPreview={() => this.setState({loadPreview: !loadPreview})}
         />
       </>;
@@ -206,12 +201,12 @@ export default class Edit extends Component {
 
         <ToolbarWidgetType
           selected={widgetType}
-          onSelect={type => this.updateAttribute({widgetType: type})}
+          onSelect={type => this.__set({widgetType: type})}
         />
 
         <ToolbarTheme
           value={theme}
-          onClick={value => this.updateAttribute({theme: value})}
+          onClick={value => this.__set({theme: value})}
         />
 
         <Toolbar controls={[
@@ -219,7 +214,7 @@ export default class Edit extends Component {
             icon: 'controls-play',
             title: __('Autoplay', 'embed-mixcloud-advanced'),
             isActive: autoplay,
-            onClick: value => this.updateAttribute({autoplay: !autoplay}),
+            onClick: value => this.__set({autoplay: !autoplay}),
           },
         ]}/>
 
@@ -230,12 +225,12 @@ export default class Edit extends Component {
           previewLoading={previewLoading}
           previewEnabled={previewEnabled}
           togglePreviewEnabled={() => {
-            this.updateAttribute({previewEnabled: !this.state.previewEnabled});
+            this.__set({previewEnabled: !this.state.previewEnabled});
             this._show.current.blinkPreview();
           }}
           previewAlign={previewAlign}
           emitChangePreviewAlign={value => {
-            this.updateAttribute({previewAlign: value});
+            this.__set({previewAlign: value});
             this._show.current.blinkPreview();
           }}
         />
@@ -244,7 +239,7 @@ export default class Edit extends Component {
           icon: 'edit',
           className: 'mea_preview_control',
           title: __('Edit URL', 'embed-mixcloud-advanced'),
-          onClick: this.emitChangeUrl,
+          onClick: () => this.__set({editingURL: true}),
         }]}/>
 
       </BlockControls>

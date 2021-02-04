@@ -2,19 +2,19 @@
 Contributors: Veliky
 Tags: mixcloud, embed, gutenberg
 Requires at least: 5.2
-Tested up to: 5.5
+Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 0.1.5
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widgets, two color schemes, and the ability to play short audio previews for each widget.
+This plugin adds two Gutenberg blocks for embedding shows from mixcloud.com: "Mixcloud Advanced" and "Mixcloud Advanced - List".
 
 == Description ==
 
-Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widgets, two color schemes, and the ability to play short audio previews for each widget.
+This plugin adds two Gutenberg blocks for embedding shows from mixcloud.com:
 
-= Features =
+= Mixcloud Advanced =
 
 - Widget types
   - Large Covered Widget
@@ -30,6 +30,18 @@ Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widg
 - Audio Preview
   - Audio Preview Button Alignment
 
+= Mixcloud Advanced - List =
+
+Allows to import multiple shows from a channel with these parameters:
+
+- Offset
+- Limit
+- Since
+- Until
+
+[x] Enable preview on each show
+[ ] Placeholder instead widget (editing parameters mode)
+
 = Demo =
 
 [Top 7 Deep House Sets](https://datcoder.com/top-7-deep-house-sets/), [Top 7 Future House Sets](https://datcoder.com/top-7-future-house-sets/)
@@ -43,6 +55,10 @@ Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widg
 3. Mixcloud Preview
 
 == Changelog ==
+
+= 0.2.0 =
+* [COMPATIBILITY] Tested up to WordPress 5.6.
+* [IMPROVEMENT] New block "Mixcloud Advanced - List". Allows to import multiple shows from a channel.
 
 = 0.1.5 =
 * SPA compatibility
