@@ -4,7 +4,7 @@ Tags: mixcloud, embed, gutenberg
 Requires at least: 5.2
 Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 0.2.0
+Stable tag: 0.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ This plugin adds two Gutenberg blocks for embedding shows from mixcloud.com: "Mi
 
 This plugin adds two Gutenberg blocks for embedding shows from mixcloud.com:
 
-= Mixcloud Advanced =
+== Mixcloud Advanced ==
 
 - Widget types
   - Large Covered Widget
@@ -30,7 +30,7 @@ This plugin adds two Gutenberg blocks for embedding shows from mixcloud.com:
 - Audio Preview
   - Audio Preview Button Alignment
 
-= Mixcloud Advanced - List =
+== Mixcloud Advanced - List ==
 
 Allows to import multiple shows from a channel with these parameters:
 
@@ -42,7 +42,7 @@ Allows to import multiple shows from a channel with these parameters:
 [x] Enable preview on each show
 [ ] Placeholder instead widget (editing parameters mode)
 
-= Demo =
+== Demo ==
 
 [Top 7 Deep House Sets](https://datcoder.com/top-7-deep-house-sets/), [Top 7 Future House Sets](https://datcoder.com/top-7-future-house-sets/)
 
@@ -55,6 +55,18 @@ Allows to import multiple shows from a channel with these parameters:
 3. Mixcloud Preview
 
 == Changelog ==
+
+= 0.2.4 =
+* [Fix] Readme, plugin description
+
+= 0.2.3 =
+* [Fix] Readme, plugin description
+
+= 0.2.2 =
+* [Fix] Missed frontend files
+
+= 0.2.1 =
+* [Fix] Missed PHP file
 
 = 0.2.0 =
 * [COMPATIBILITY] Tested up to WordPress 5.6.

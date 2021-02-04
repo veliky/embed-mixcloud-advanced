@@ -9,8 +9,8 @@ import {matchMixcloudUrl} from "../utils";
 
 registerBlockType('veliky/mixcloud-list', {
 
-  icon: mixcloudIcon,
   title: __('Mixcloud Advanced - List', 'embed-mixcloud-advanced'),
+  icon: mixcloudIcon,
 
   attributes: {
     url: {
