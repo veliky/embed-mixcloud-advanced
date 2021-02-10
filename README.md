@@ -36,7 +36,7 @@ Allows to import multiple shows from a channel with these parameters:
 
 ### Details
 
- * Version:           0.2.4
+ * Version:           0.2.5
  * Requires PHP:      5.6
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html

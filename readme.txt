@@ -4,7 +4,7 @@ Tags: mixcloud, embed, gutenberg
 Requires at least: 5.2
 Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 0.2.4
+Stable tag: 0.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,12 +49,16 @@ Allows to import multiple shows from a channel with these parameters:
 == Screenshots ==
 
 1. Add block
-1. Set the show URL
-1. 6 Types Of Widget
-2. Dark / Light Scheme
-3. Mixcloud Preview
+2. Set the show URL
+3. 6 Types Of Widget
+4. Dark / Light Scheme
+5. Mixcloud Preview
+6. Mixcloud Preview
 
 == Changelog ==
+
+= 0.2.5 =
+* [Fix] New block name
 
 = 0.2.4 =
 * [Fix] Readme, plugin description

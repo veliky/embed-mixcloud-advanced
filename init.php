@@ -5,7 +5,7 @@ namespace Veliky\EMA;
 /**
  * Plugin Name:       Embed Mixcloud Advanced
  * Description:       This plugin adds two Gutenberg blocks for embedding shows from mixcloud.com: "Mixcloud Advanced" and "Mixcloud Advanced - List".
- * Version:           0.2.4
+ * Version:           0.2.5
  * Author:            Evhen Veliky
  * Author URI:        https://datcoder.com
  * Plugin URI:        https://datcoder.com/embed-mixcloud-advanced
