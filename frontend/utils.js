@@ -6,21 +6,27 @@
 export const matchMixcloudUrl = url => /^\s*(https?:\/\/(.+?\.)?mixcloud\.com\S+)\s*$/i.test(url);
 
 /**
- * @param {String} url
+ * @param {String} channel Slug or URL
  *
  * @return {string}
  */
-export const getMixcloudChannelName = (url) => {
+export const getMixcloudChannelName = (channel) => {
 
-  const match = url.match(new RegExp("com\/([^/]+)"));
+  const match = channel.match(new RegExp("com\/([^/]+)"));
 
   if (match && typeof match[1] === 'string') {
-    return match[1];
+    channel = match[1];
   }
 
-  return '';
+  return channel;
 
 };
+
+/**
+ * @param {string} channelName
+ * @return {string}
+ */
+export const getMixcloudChannelURL = (channelName) => `https://www.mixcloud.com/${channelName}`;
 
 /**
  * @type {string}

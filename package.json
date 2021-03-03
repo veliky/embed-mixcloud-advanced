@@ -1,21 +1,25 @@
 {
   "name": "mixcloud-embed-advanced",
-  "version": "0.2.5",
-  "description": "",
+  "version": "1.0.0",
+  "description": "All in one mixcloud embedding solution: Shortcodes + Widgets + Guterberg blocks. Many options for displaying individual shows and lists.",
   "author": "Evhen Veliky",
   "license": "GPL-2.0",
   "keywords": [
     "WordPress",
     "Mixcloud",
-    "Gutenberg"
+    "Gutenberg",
+    "Shortcode",
+    "Widget"
   ],
   "scripts": {
     "build": "wp-scripts build --config webpack.config.js",
     "format:js": "wp-scripts format-js",
     "lint:js": "wp-scripts lint-js",
     "start": "wp-scripts start --config webpack.config.js",
-    "watch-css": "node-sass frontend/style.scss dist/style.min.css -watch",
-    "build-css": "node-sass frontend/style.scss dist/style.min.css --output-style compressed",
+    "watch-block-css": "node-sass frontend/block-show.scss dist/block-show.min.css -watch",
+    "build-block-css": "node-sass frontend/block-show.scss dist/block-show.min.css --output-style compressed",
+    "watch-widgets-css": "node-sass frontend/widgets.scss dist/widgets.min.css -watch",
+    "build-widgets-css": "node-sass frontend/widgets.scss dist/widgets.min.css --output-style compressed",
     "i18n-make-pot": "wp i18n make-pot . languages/embed-mixcloud-advanced.pot --domain=embed-mixcloud-advanced && sed -i -E 's/(#: frontend+.*$)/#: dist\\/public-bundle.min.js\\r\\n#: dist\\/block-show-editor-bundle.min.js/' languages/embed-mixcloud-advanced.pot",
     "i18n-make-mo": "wp i18n make-mo languages",
     "i18n-make-json": "wp i18n make-json languages"

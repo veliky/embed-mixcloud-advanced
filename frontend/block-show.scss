@@ -227,6 +227,11 @@
 
     flex-direction: column;
 
+    .components-placeholder__input {
+      flex: 1 1 auto;
+      margin: 0 8px 0 0;
+    }
+
     .mea-list__form__group, .mea-list__form__group_secondary {
       display: flex;
       flex-flow: row wrap;

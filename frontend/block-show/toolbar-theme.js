@@ -14,7 +14,7 @@ export default function ToolbarTheme (props) {
   function createThumbsControl (theme) {
     return {
       icon: theme === 'light' ? lightThemeIcon : darkThemeIcon,
-      title: __(capitalize(theme), 'embed-mixcloud-advanced'),
+      title: theme === 'light' ? __('Light', 'embed-mixcloud-advanced') : __('Dark', 'embed-mixcloud-advanced'),
       isActive: value === theme,
       onClick: () => onClick(theme),
     };

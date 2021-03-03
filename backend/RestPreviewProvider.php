@@ -12,22 +12,22 @@ class RestPreviewProvider {
 	/**
 	 * @var \WP_Http
 	 */
-	private $http;
+	private static $http;
 
 	/**
-	 * RestPreviewProvider constructor.
+	 * RestPreviewProvider initialization.
 	 *
 	 * @param \WP_Http $http
 	 */
-	public function __construct( $http ) {
+	public static function init( $http ) {
 
-		$this->http = $http;
+		self::$http = $http;
 
 		add_action( 'rest_api_init', function () {
 
 			register_rest_route( REST_NAMESPACE, '/preview/', [
 				'method'              => 'GET',
-				'callback'            => [ $this, 'response' ],
+				'callback'            => [ __CLASS__, 'response' ],
 				'permission_callback' => '__return_true'
 			] );
 
@@ -37,35 +37,23 @@ class RestPreviewProvider {
 	/**
 	 * @return \WP_REST_Response
 	 */
-	public function response() {
+	public static function response() {
 
 		$response = [];
 
 		if (
 			isset( $_REQUEST['show_url'] ) and
-			$show_url = esc_url_raw( $_REQUEST['show_url'] ) and
-			filter_var( $show_url, FILTER_VALIDATE_URL ) and
-			preg_match( '/^\s*(https?:\/\/(.+?\.)?mixcloud\.com\S+)\s*$/i', $show_url )
+			$preview = self::load_preview( $_REQUEST['show_url'] )
 		) {
 
-			$http_response = $this->http->get( $show_url );
+			if ( $preview instanceof \WP_Error ) {
+				$response['error'] = $preview->get_error_message();
+			} else if ( $preview ) {
 
-			if ( ! $http_response instanceof \WP_Error ) {
-
-				$matches = [];
-				preg_match( '/(?:&quot;previewUrl&quot;:&quot;)(.*?)(?:&quot;)/', $http_response['body'], $matches );
-
-				$response = $matches;
-
-				if ( isset( $matches[1] ) and ! empty( $matches[1] ) ) {
-					$response = [
-						'show_url'    => esc_url( $show_url ),
-						'preview_url' => esc_url( $matches[1] ),
-					];
-				}
-
-			} else {
-				$response['error'] = $http_response->get_error_message();
+				$response = [
+					'show_url'    => esc_url( $_REQUEST['show_url'] ),
+					'preview_url' => $preview['url'],
+				];
 			}
 
 		} else {
@@ -73,5 +61,38 @@ class RestPreviewProvider {
 		}
 
 		return new \WP_REST_Response( $response, 200 );
+	}
+
+	/**
+	 * @param string $show_url
+	 *
+	 * @return array|bool|\WP_Error
+	 */
+	public static function load_preview( $show_url ) {
+
+		$preview = false;
+
+		if (
+			$show_url = esc_url_raw( $show_url ) and
+			filter_var( $show_url, FILTER_VALIDATE_URL ) and
+			preg_match( '/^\s*(https?:\/\/(.+?\.)?mixcloud\.com\S+)\s*$/i', $show_url )
+		) {
+
+			$http_response = self::$http->get( $show_url );
+
+			if ( ! $http_response instanceof \WP_Error ) {
+
+				$matches = [];
+				preg_match( '/(?:&quot;previewUrl&quot;:&quot;)(.*?)(?:&quot;)/', $http_response['body'], $matches );
+
+				if ( isset( $matches[1] ) and ! empty( $matches[1] ) ) {
+					$preview = [
+						'url' => esc_url( $matches[1] ),
+					];
+				}
+			}
+		}
+
+		return $preview;
 	}
 }

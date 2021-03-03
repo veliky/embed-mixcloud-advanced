@@ -25,32 +25,32 @@ export default withFocusReturn(class Edit extends Component {
 
     super(props);
 
-    this.setUrl = this.setUrl.bind(this);
+    this.setChannel = this.setChannel.bind(this);
     this.submit = this.submit.bind(this);
     this.requestShows = this.requestShows.bind(this);
     this.initInnerBlocks = this.initInnerBlocks.bind(this);
     this.__set = this.__set.bind(this);
 
     this.state = {
-      url: props.attributes.url,
+      channel: props.attributes.channel,
       limit: props.attributes.limit,
       offset: props.attributes.offset,
       since: props.attributes.since || '',
       until: props.attributes.until || '',
       editingURL: props.attributes.editingURL,
-      shows: props.attributes.url || [],
-      loadPreview: props.attributes.url || true,
+      shows: props.attributes.shows || [],
+      loadPreview: props.attributes.loadPreview || true,
       editingChildURL: props.attributes.editingChildURL || false,
     };
   }
 
   /**
-   * @param {string} url
+   * @param {string} channel
    * @this Edit
    */
-  setUrl(url) {
+  setChannel(channel) {
 
-    this.__set({url});
+    this.__set({channel});
 
     if (this.props.cannotEmbed && !this.state.editingURL) {
       this.__set({editingURL: true});
@@ -66,9 +66,9 @@ export default withFocusReturn(class Edit extends Component {
       event.preventDefault();
     }
 
-    const {url} = this.state;
+    const {channel} = this.state;
 
-    if (url) {
+    if (channel) {
       this.__set({editingURL: false});
       this.requestShows();
     }
@@ -93,11 +93,11 @@ export default withFocusReturn(class Edit extends Component {
       fetching: true,
     });
 
-    const {url} = this.state;
+    const {channel} = this.state;
 
     (async () => {
 
-      let request = 'https://api.mixcloud.com/' + getMixcloudChannelName(url) + '/cloudcasts/?a=a';
+      let request = 'https://api.mixcloud.com/' + getMixcloudChannelName(channel) + '/cloudcasts/?a=a';
 
       ['limit', 'offset', 'since', 'until'].forEach((element, index) => {
         if (this.state[element]) {
@@ -162,7 +162,7 @@ export default withFocusReturn(class Edit extends Component {
   render() {
 
     const {
-      url,
+      channel,
       limit,
       offset,
       since,
@@ -193,7 +193,7 @@ export default withFocusReturn(class Edit extends Component {
 
         {!fetching && <Placeholder
           cannotLoad={cannotEmbed}
-          url={url}
+          channel={channel}
           limit={limit}
           offset={offset}
           since={since}
@@ -203,7 +203,7 @@ export default withFocusReturn(class Edit extends Component {
           editingChildURL={editingChildURL}
           onSubmit={this.submit}
           onChangeValue={(key, value) => this.__set({[key]: value})}
-          onChangeURL={event => this.setUrl(event.target.value)}
+          onChangeChannel={event => this.setChannel(event.target.value)}
           inverse={key => event => this.setState({[key]:!this.state[key]})}
         />}
 

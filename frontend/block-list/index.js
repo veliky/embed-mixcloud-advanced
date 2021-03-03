@@ -5,7 +5,7 @@ import {registerBlockType} from '@wordpress/blocks';
 import {InnerBlocks} from '@wordpress/block-editor';
 import {mixcloudIcon} from '../icons';
 import Edit from './edit';
-import {matchMixcloudUrl} from "../utils";
+import {getMixcloudChannelURL, matchMixcloudUrl} from "../utils";
 
 registerBlockType('veliky/mixcloud-list', {
 
@@ -13,7 +13,7 @@ registerBlockType('veliky/mixcloud-list', {
   icon: mixcloudIcon,
 
   attributes: {
-    url: {
+    channel: {
       type: 'string',
     },
     limit: {
@@ -42,7 +42,8 @@ registerBlockType('veliky/mixcloud-list', {
   edit: compose(
     withSelect((select, ownProps) => {
 
-      const { url, editingURL } = ownProps.attributes;
+      const { channel, editingURL } = ownProps.attributes;
+      const url = matchMixcloudUrl(channel) ? channel : getMixcloudChannelURL(channel);
       const core = select('core');
       const {
         getEmbedPreview,

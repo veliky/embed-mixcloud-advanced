@@ -21,20 +21,29 @@ export default class Preview {
   static getInstance(container, previewBtn, previewUrl, onPlay) {
 
     const instance = new Preview(container, previewBtn, previewUrl, onPlay);
-    instances.push(instance);
+    let instanceExists = false;
+
+    instances.forEach(listedInstance => {
+      if (listedInstance.previewUrl === instance.previewUrl) {
+        instanceExists = true;
+      }
+    });
+
+    if (!instanceExists) {
+      instances.push(instance);
+    }
 
     return instance;
   }
 
   /**
-   * @param {Preview} instance
+   * @param {Preview|boolean} instance
    */
-  static pauseAll(instance) {
+  static pauseAll(instance = false) {
 
     instances.forEach(listedInstance => {
-      if (listedInstance !== instance) {
+      if (instance === false || listedInstance.previewUrl !== instance.previewUrl) {
         listedInstance.stop(false);
-        listedInstance.onPlay();
       }
     });
   }
@@ -51,6 +60,7 @@ export default class Preview {
 
     this.container = container;
     this.previewBtn = previewBtn;
+    this.previewUrl = previewUrl;
     this.onPlay = onPlay;
 
     this.play = this.play.bind(this);

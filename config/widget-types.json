@@ -1,0 +1,37 @@
+{
+  "picture": {
+    "title": "Large Covered Widget",
+    "height": 180,
+    "hideCover": false
+  },
+  "classic": {
+    "title": "Classic Widget",
+    "height": 120,
+    "hideCover": true
+  },
+  "noArtwork": {
+    "title": "Widget w/o Artwork",
+    "height": 120,
+    "hideArtwork": true,
+    "hideCover": true
+  },
+  "covered": {
+    "title": "Covered Widget",
+    "height": 120,
+    "hideArtwork": true,
+    "hideCover": false
+  },
+  "mini": {
+    "title": "Mini Widget",
+    "height": 60,
+    "hideCover": true,
+    "mini": true
+  },
+  "miniNoArtwork": {
+    "title": "Mini Widget w/o Artwork",
+    "height": 60,
+    "hideArtwork": true,
+    "hideCover": true,
+    "mini": true
+  }
+}

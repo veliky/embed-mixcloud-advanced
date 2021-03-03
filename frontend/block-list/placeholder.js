@@ -7,7 +7,7 @@ export default (props) => {
 
   const {
     cannotLoad,
-    url,
+    channel,
     limit,
     offset,
     since,
@@ -15,7 +15,7 @@ export default (props) => {
     previewInfoLink,
     loadPreview,
     editingChildURL,
-    onChangeURL,
+    onChangeChannel,
     inverse,
     onSubmit,
     onChangeValue,
@@ -36,12 +36,12 @@ export default (props) => {
       <form className={"mea-list__form"} onSubmit={onSubmit}>
         <div className={"mea-list__form__group"}>
           <input
-            type="url"
-            value={url || ''}
+            type="text"
+            value={channel || ''}
             className={'components-placeholder__input' + (cannotLoad ? ' components-placeholder__input-error' : '')}
-            aria-label={__('Mixcloud Channel URL', 'embed-mixcloud-advanced')}
-            placeholder={__('Enter channel URL here…', 'embed-mixcloud-advanced')}
-            onChange={onChangeURL}
+            aria-label={__('Mixcloud Channel slug or URL', 'embed-mixcloud-advanced')}
+            placeholder={__('Enter channel slug or URL here…', 'embed-mixcloud-advanced')}
+            onChange={onChangeChannel}
           />
 
           <Button isPrimary type="submit" tabIndex={0}>

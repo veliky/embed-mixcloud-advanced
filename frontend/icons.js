@@ -56,20 +56,20 @@ export const miniWidgetIcon = (
   </SVG>
 );
 
-export const classicWidgetHideArtworkIcon = (
+export const noArtworkWidgetIcon = (
   <SVG viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <Rect height="12" width="22" y="6" x="1" fillOpacity="0" strokeOpacity="null" strokeWidth="2" stroke="currentColor"/>
     <line strokeLinecap="null" strokeLinejoin="null" y2="12" x2="2" y1="12" x1="22" fillOpacity="null" strokeOpacity="null" strokeWidth="2" stroke="currentColor" fill="none"/>
   </SVG>
 );
 
-export const classicWidgetCoveredIcon = (
+export const coveredWidgetIcon = (
   <SVG viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <Rect height="12" width="22" y="6" x="1" fillOpacity="0" strokeOpacity="null" strokeWidth="2" stroke="currentColor"/>
   </SVG>
 );
 
-export const miniWidgetHideArtworkIcon = (
+export const miniNoArtworkWidgetIcon = (
   <SVG viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <Rect height="8" width="22" y="8" x="1" fillOpacity="0" strokeOpacity="null" strokeWidth="2" stroke="currentColor"/>
   </SVG>

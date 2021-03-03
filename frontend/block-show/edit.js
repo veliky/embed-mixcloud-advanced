@@ -115,7 +115,7 @@ export default class Edit extends Component {
 
     (async () => {
 
-      let response = await fetch(window.location.origin + '/wp-json/vema/v1/preview/?show_url=' + this.state.url);
+      let response = await fetch(window.location.origin + '/index.php?rest_route=/vema/v1/preview/&show_url=' + this.state.url);
 
       if (response.ok) {
         return await response.json();

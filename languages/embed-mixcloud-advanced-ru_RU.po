@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Embed Mixcloud Advanced 0.0.1\n"
+"Project-Id-Version: Embed Mixcloud Advanced 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/embed-mixcloud-advanced\n"
-"Last-Translator: Evhen Veliky <admin@datcoder.com>\n"
-"Language-Team: Русский\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-06-06T05:54:19+00:00\n"
+"POT-Creation-Date: 2021-03-03T13:52:23+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Language: ru_RU\n"
-"X-Generator: WP-CLI 2.5.0-alpha-68fb0b6\n"
+"Language: \n"
+"X-Generator: WP-CLI 2.5.0-alpha-75cb7e3\n"
 "X-Domain: embed-mixcloud-advanced\n"
 
 #. Plugin Name of the plugin
@@ -22,8 +22,8 @@ msgid "https://datcoder.com/embed-mixcloud-advanced"
 msgstr ""
 
 #. Description of the plugin
-msgid "Gutenberg block for embedding shows from mixcloud.com. There are 6 types of widgets, two color schemes, and the ability to play short audio previews for each widget."
-msgstr "Гутенберг блок для вставки шоу с mixcloud.com. Имеется 6 типов виджетов, две цветовые схемы, а так же возможность проигрывания коротких аудио превью к каждому виджету."
+msgid "All in one solution for embedding content from mixcloud.com. 2 Shortcodes + 2 Widgets + 2 Gutenberg blocks."
+msgstr ""
 
 #. Author of the plugin
 msgid "Evhen Veliky"
@@ -33,225 +33,98 @@ msgstr "Евгений Великий"
 msgid "https://datcoder.com"
 msgstr ""
 
-#: backend/RestPreviewProvider.php:69
+#: backend/RestPreviewProvider.php:60
 msgid "Show url not specified!"
 msgstr "Не указан URL для шоу!"
 
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Loading…"
-msgstr "Загрузка…"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Mixcloud Advanced - List"
-msgstr "Mixcloud Advanced - Список"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Something went wrong!"
-msgstr "Что-то пошло не так!"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "To import shows from a Mixcloud channel please select the parameters and press button."
-msgstr "Для импорта шоу с Mixcloud канала пожалуйста выберите параметры и нажмите кнопку."
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Mixcloud Channel URL"
-msgstr "URL Mixcloud Канала"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Enter channel URL here…"
-msgstr "Введите URL канала"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Offset"
-msgstr "Сдвиг"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Limit"
-msgstr "Лимит"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Since"
-msgstr "Начало периода"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Until"
-msgstr "Конец периода"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Enable preview on each show"
-msgstr "Превью на каждом виджете"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Placeholder instead widget (editing parameters mode)"
-msgstr "Плейсхолдер вместо виджета (режим редактирования)"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "To download the preview data, a request will be made from the server to the show page."
-msgstr "Для загрузки данных превью будет совершён запрос с сервера на страницу шоу."
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Server responded that something went wrong."
-msgstr "На сервере что-то пошло не так."
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Embedding…"
-msgstr "Вставка…"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Autoplay"
-msgstr "Автозапуск"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Edit URL"
-msgstr "Изменить URL"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "You can"
-msgstr "Вы можете"
-
-#: dist/block-show-editor-bundle.min.js:1
-msgid "Try again"
-msgstr "Попробовать снова"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "or"
-msgstr "или"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Send report"
-msgstr "Пожаловаться"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Mixcloud Advanced"
-msgstr ""
-
-#: dist/block-show-editor-bundle.min.js:1
-msgid "This show could not be embedded!"
-msgstr "Это шоу не может быть встроено!"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Paste a link to the show you want to display on your site."
-msgstr "Введите ссылку на шоу, которое вы хотите отобразить на своем сайте."
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Mixcloud URL"
-msgstr ""
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Enter URL to embed here…"
-msgstr "Введите URL для виджета…"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Enable preview"
-msgstr "Включить превью"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "This function can be disabled. To download preview data, a request will be made from the server to the show page."
-msgstr "Эта функция может быть отключена. Для загрузки данных превью будет совершён запрос с сервера на страницу шоу."
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "See more"
-msgstr "Подробнее"
-
+#: backend/ShortcodeShow.php:91
 #: dist/public-bundle.min.js
 #: dist/block-show-editor-bundle.min.js
 msgid "Preview"
 msgstr "Превью"
 
+#: backend/WidgetList.php:43
 #: dist/public-bundle.min.js
 #: dist/block-show-editor-bundle.min.js
-msgid "Left"
-msgstr "Слева"
+msgid "Mixcloud Advanced - List"
+msgstr "Mixcloud Advanced - List"
 
+#: backend/WidgetList.php:44
+msgid "Displays a list of mixcloud shows."
+msgstr "Показывает список из mixcloud шоу."
+
+#: backend/WidgetList.php:84
+msgid "Channel slug or URL:"
+msgstr "Слаг или URL канала:"
+
+#: backend/WidgetList.php:93
 #: dist/public-bundle.min.js
 #: dist/block-show-editor-bundle.min.js
-msgid "Center"
-msgstr "По центру"
+msgid "Offset"
+msgstr "Сдвиг"
 
+#: backend/WidgetList.php:100
 #: dist/public-bundle.min.js
 #: dist/block-show-editor-bundle.min.js
-msgid "Right"
-msgstr "Справа"
+msgid "Limit"
+msgstr "Лимит"
 
+#: backend/WidgetList.php:109
 #: dist/public-bundle.min.js
 #: dist/block-show-editor-bundle.min.js
-msgid "Preview button align"
-msgstr "Положение кнопки превью"
+msgid "Since"
+msgstr "Начало периода"
 
+#: backend/WidgetList.php:116
 #: dist/public-bundle.min.js
 #: dist/block-show-editor-bundle.min.js
-msgid "There is no preview data for this show. Download?"
-msgstr "Данные о превью отсутствуют. Загрузить?"
+msgid "Until"
+msgstr "Конец периода"
 
+#: backend/WidgetShow.php:52
 #: dist/public-bundle.min.js
 #: dist/block-show-editor-bundle.min.js
-msgid "Large Covered Widget"
-msgstr "Большой виджет с фоном"
+msgid "Mixcloud Advanced"
+msgstr "Mixcloud Advanced"
 
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Classic Widget"
-msgstr "Классический"
+#: backend/WidgetShow.php:53
+msgid "Displays a mixcloud show."
+msgstr "Показывает mixcloud шоу."
 
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Widget w/o Artwork"
-msgstr "Виджет без обложки"
+#: backend/WidgetShow.php:137
+msgid "Widget type"
+msgstr "Тип виджета"
 
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Covered Widget"
-msgstr "Виджет с фоном"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Mini Widget"
-msgstr "Мини виджет"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Mini Widget w/o Artwork"
-msgstr "Мини виджет без обложки"
-
-#: dist/public-bundle.min.js
-#: dist/block-show-editor-bundle.min.js
-msgid "Dark"
-msgstr "Тёмный"
-
+#: backend/WidgetShow.php:154
 #: dist/public-bundle.min.js
 #: dist/block-show-editor-bundle.min.js
 msgid "Light"
 msgstr "Светлый"
 
+#: backend/WidgetShow.php:161
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Autoplay"
+msgstr "Автозапуск"
+
+#: backend/WidgetShow.php:170
+#: dist/public-bundle.min.js
+#: dist/block-show-editor-bundle.min.js
+msgid "Enable preview"
+msgstr "Включить превью"
+
+#: backend/WidgetShow.php:170
+msgid "Download and enable preview feature."
+msgstr "Загрузить и включить превью"
+
+#: backend/WidgetShow.php:178
+msgid "Preview button align: Left"
+msgstr "Положение кнопки превью: Слева"
+
+#: backend/WidgetShow.php:185
+msgid "Preview button align: Center"
+msgstr "Положение кнопки превью: По центру"
+
+#: backend/WidgetShow.php:192
+msgid "Preview button align: Right"
+msgstr "Положение кнопки превью: Справа"
