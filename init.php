@@ -5,7 +5,7 @@ namespace Veliky\EMA;
 /**
  * Plugin Name:       Embed Mixcloud Advanced
  * Description:       All in one solution for embedding content from mixcloud.com. 2 Shortcodes + 2 Widgets + 2 Gutenberg blocks.
- * Version:           1.0.0
+ * Version:           1.0.2
  * Author:            Evhen Veliky
  * Author URI:        https://datcoder.com
  * Plugin URI:        https://datcoder.com/embed-mixcloud-advanced

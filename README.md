@@ -79,7 +79,7 @@ All attributes:
 
 ### Details
 
- * Version:           1.0.0
+ * Version:           1.0.2
  * Author:            Evhen Veliky
  * Author URI:        https://datcoder.com
  * Plugin URI:        https://datcoder.com/embed-mixcloud-advanced

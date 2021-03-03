@@ -130,7 +130,7 @@ registerBlockType('veliky/mixcloud-show', {
       return null;
     }
 
-    const widget = WIDGET_TYPES[widgetType || 'classic'];
+    const widget = WIDGET_TYPES[widgetType || 'classic'] ? WIDGET_TYPES[widgetType || 'classic'] : WIDGET_TYPES['classic'];
 
     return (
       <figure>
